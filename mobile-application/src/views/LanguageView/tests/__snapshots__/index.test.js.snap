@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LanguageView component renders the component as expected 1`] = `
+<AppView
+  headerMessage="Translated[translation:languageMessage]({})"
+>
+  <RadioButton.Group
+    onValueChange={[Function]}
+  >
+    <RadioButton.Item
+      label="Translated[translation:spanish]({})"
+      value="es"
+    />
+    <RadioButton.Item
+      label="Translated[translation:english]({})"
+      value="en"
+    />
+  </RadioButton.Group>
+</AppView>
+`;

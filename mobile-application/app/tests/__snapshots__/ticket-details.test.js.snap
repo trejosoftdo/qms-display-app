@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TicketDetails route component renders the component as expected 1`] = `
+<React.Fragment>
+  <AppHeader
+    title="Translated[translation:turnDetails]({})"
+  />
+  <TicketDetailsView />
+</React.Fragment>
+`;

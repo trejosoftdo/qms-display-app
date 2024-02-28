@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChooseServicesView component renders the component as expected when data has been loaded 1`] = `
+<AppView
+  headerMessage="Translated[translation:chooseServiceMessage]({"category":"test-category-label"})"
+  loading={false}
+>
+  <ConditionalContainer
+    display={true}
+  >
+    <Cards
+      items={
+        [
+          {
+            "id": "mock-id",
+            "label": "mock-label",
+            "name": "mock-name",
+          },
+        ]
+      }
+      onItemSelect={[Function]}
+    />
+  </ConditionalContainer>
+</AppView>
+`;
+
+exports[`ChooseServicesView component renders the component as expected when it has errors 1`] = `
+<AppView
+  error={[Error: Unexpected error]}
+  headerMessage="Translated[translation:chooseServiceMessage]({"category":"test-category-label"})"
+  loading={false}
+>
+  <ConditionalContainer
+    display={false}
+  >
+    <Cards
+      onItemSelect={[Function]}
+    />
+  </ConditionalContainer>
+</AppView>
+`;
+
+exports[`ChooseServicesView component renders the component as expected when loading 1`] = `
+<AppView
+  headerMessage="Translated[translation:waitMessage]({"category":"test-category-label"})"
+  loading={true}
+>
+  <ConditionalContainer
+    display={false}
+  >
+    <Cards
+      onItemSelect={[Function]}
+    />
+  </ConditionalContainer>
+</AppView>
+`;

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionButton component renders the component with the provided props as expected 1`] = `
+<Button
+  icon="lock"
+  labelStyle={
+    {
+      "fontSize": 16,
+      "lineHeight": 24,
+    }
+  }
+  mode="contained"
+  onPress={[MockFunction]}
+  style={
+    {
+      "borderRadius": 8,
+    }
+  }
+>
+  Test message
+</Button>
+`;

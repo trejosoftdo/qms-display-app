@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PrintButton component renders the component as expected with the given props 1`] = `
+<ActionButton
+  icon="printer"
+  message="Translated[translation:printTicket]({})"
+  onPress={[MockFunction]}
+/>
+`;

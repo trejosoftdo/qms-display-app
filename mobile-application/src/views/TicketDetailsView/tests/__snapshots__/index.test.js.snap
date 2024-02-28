@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TicketDetailsView component renders the component as expected when data has been loaded 1`] = `
+<AppView
+  headerMessage="Translated[translation:welcomeTurn]({"service":"mock-service-label","customer":"customer-name"})"
+  loading={false}
+>
+  <ConditionalContainer
+    display={true}
+  >
+    <React.Fragment>
+      <Value
+        icon="cards-outline"
+        value="mock-value"
+      />
+      <UsersInQueue
+        total={14}
+      />
+      <PrintButton
+        onPress={[Function]}
+      />
+    </React.Fragment>
+  </ConditionalContainer>
+</AppView>
+`;
+
+exports[`TicketDetailsView component renders the component as expected when it has errors 1`] = `
+<AppView
+  error={[Error: Unexpected error]}
+  headerMessage="Translated[translation:welcomeTurn]({"service":"mock-service-label","customer":"customer-name"})"
+  loading={false}
+>
+  <ConditionalContainer
+    display={false}
+  >
+    <React.Fragment>
+      <Value
+        icon="cards-outline"
+      />
+      <UsersInQueue />
+      <PrintButton
+        onPress={[Function]}
+      />
+    </React.Fragment>
+  </ConditionalContainer>
+</AppView>
+`;
+
+exports[`TicketDetailsView component renders the component as expected when loading 1`] = `
+<AppView
+  headerMessage="Translated[translation:waitMessage]({"service":"mock-service-label","customer":"customer-name"})"
+  loading={true}
+>
+  <ConditionalContainer
+    display={false}
+  >
+    <React.Fragment>
+      <Value
+        icon="cards-outline"
+      />
+      <UsersInQueue />
+      <PrintButton
+        onPress={[Function]}
+      />
+    </React.Fragment>
+  </ConditionalContainer>
+</AppView>
+`;

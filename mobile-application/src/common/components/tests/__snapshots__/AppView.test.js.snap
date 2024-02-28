@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppView component renders the component with the provided props as expected 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#ffffff",
+      "display": "flex",
+      "flex": 1,
+      "justifyContent": "flex-start",
+      "paddingHorizontal": 24,
+    }
+  }
+>
+  <Header
+    message="Test message"
+  />
+  <div>
+    Test content
+  </div>
+  <ExpoStatusBar
+    style="auto"
+  />
+</View>
+`;
+
+exports[`AppView component renders the error message when there is an error 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#ffffff",
+      "display": "flex",
+      "flex": 1,
+      "justifyContent": "flex-start",
+      "paddingHorizontal": 24,
+    }
+  }
+>
+  <Header
+    message="Test message"
+  />
+  <div>
+    Test content
+  </div>
+  <ErrorMessage />
+  <ExpoStatusBar
+    style="auto"
+  />
+</View>
+`;
+
+exports[`AppView component renders the loading indicator when loading 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#ffffff",
+      "display": "flex",
+      "flex": 1,
+      "justifyContent": "flex-start",
+      "paddingHorizontal": 24,
+    }
+  }
+>
+  <Header
+    message="Test message"
+  />
+  <LoadingIndicator
+    loading={true}
+  />
+  <div>
+    Test content
+  </div>
+  <ExpoStatusBar
+    style="auto"
+  />
+</View>
+`;

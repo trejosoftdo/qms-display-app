@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InformationView component renders the component as expected when data has been loaded 1`] = `
+<AppView
+  headerMessage="Translated[translation:information]({})"
+  loading={false}
+>
+  <ConditionalContainer
+    display={true}
+  >
+    <List.Accordion
+      left={[Function]}
+      style={
+        {
+          "maxWidth": 500,
+          "width": "100%",
+        }
+      }
+      title=""
+    >
+      <List.Item
+        description="mock-device-id"
+        title="Translated[translation:id]({})"
+      />
+    </List.Accordion>
+  </ConditionalContainer>
+</AppView>
+`;
+
+exports[`InformationView component renders the component as expected when it has errors 1`] = `
+<AppView
+  error={[Error: Unexpected error]}
+  headerMessage="Translated[translation:information]({})"
+  loading={false}
+>
+  <ConditionalContainer
+    display={false}
+  >
+    <List.Accordion
+      left={[Function]}
+      style={
+        {
+          "maxWidth": 500,
+          "width": "100%",
+        }
+      }
+      title=""
+    >
+      <List.Item
+        title="Translated[translation:id]({})"
+      />
+    </List.Accordion>
+  </ConditionalContainer>
+</AppView>
+`;
+
+exports[`InformationView component renders the component as expected when loading 1`] = `
+<AppView
+  headerMessage="Translated[translation:information]({})"
+  loading={true}
+>
+  <ConditionalContainer
+    display={false}
+  >
+    <List.Accordion
+      left={[Function]}
+      style={
+        {
+          "maxWidth": 500,
+          "width": "100%",
+        }
+      }
+      title=""
+    >
+      <List.Item
+        title="Translated[translation:id]({})"
+      />
+    </List.Accordion>
+  </ConditionalContainer>
+</AppView>
+`;

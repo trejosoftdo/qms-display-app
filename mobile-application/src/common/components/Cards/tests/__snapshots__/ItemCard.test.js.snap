@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemCard component renders the component with the provided props as expected 1`] = `
+<Card
+  mode="outlined"
+  onPress={[MockFunction]}
+  style={
+    {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#d4d4d4",
+      "cursor": "pointer",
+      "marginRight": 2,
+      "maxWidth": 150,
+      "paddingBottom": 16,
+      "width": "45%",
+    }
+  }
+>
+  <Card.Content
+    style={
+      {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Avatar.Icon
+      icon="lock"
+      size={64}
+      style={
+        {
+          "backgroundColor": "#2929cc",
+        }
+      }
+    />
+    <ForwardRef(Text)
+      style={
+        {
+          "color": "#3c3744",
+          "paddingTop": 10,
+          "textAlign": "center",
+        }
+      }
+      variant="titleMedium"
+    >
+      Test title
+    </ForwardRef(Text)>
+  </Card.Content>
+</Card>
+`;

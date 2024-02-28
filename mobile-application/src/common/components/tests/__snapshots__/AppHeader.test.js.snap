@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppHeader component renders the component with the provided props as expected 1`] = `
+<Screen
+  options={
+    {
+      "headerBackTitleStyle": {
+        "fontFamily": "Montserrat-Regular",
+      },
+      "headerRight": <div>
+        Header Right
+      </div>,
+      "headerStyle": {
+        "backgroundColor": "#2929cc",
+      },
+      "headerTintColor": "#ffffff",
+      "headerTitleStyle": {
+        "fontFamily": "Montserrat-Regular",
+      },
+      "title": "Test title",
+    }
+  }
+/>
+`;

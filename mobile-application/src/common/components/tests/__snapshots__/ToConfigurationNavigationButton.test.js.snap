@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToConfigurationNavigationButton component renders the component as expected 1`] = `
+<ForwardRef
+  icon="cog"
+  iconColor="#ffffff"
+  onPress={[Function]}
+  size={20}
+/>
+`;

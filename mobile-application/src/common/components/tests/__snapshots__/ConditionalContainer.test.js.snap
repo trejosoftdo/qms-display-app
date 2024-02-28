@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConditionalContainer component does not render the content if display is not active 1`] = `null`;
+
+exports[`ConditionalContainer component does render the content if display is active 1`] = `
+<div>
+  Test content
+</div>
+`;

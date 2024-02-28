@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VerificationQRCode component renders the component as expected 1`] = `
+<View
+  style={
+    {
+      "marginBottom": 32,
+    }
+  }
+>
+  <QRCode
+    value="https://verification-uri.test"
+  />
+</View>
+`;

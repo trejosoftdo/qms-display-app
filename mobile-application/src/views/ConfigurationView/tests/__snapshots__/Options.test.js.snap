@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Options component renders the component as expected 1`] = `
+<List.Section
+  style={
+    {
+      "maxWidth": 500,
+      "width": "100%",
+    }
+  }
+>
+  <List.Subheader>
+    Translated[translation:options]({})
+  </List.Subheader>
+  <Option
+    icon="information"
+    onPress={[Function]}
+    title="Translated[translation:information]({})"
+  />
+  <Option
+    icon="connection"
+    onPress={[Function]}
+    title="Translated[translation:connection]({})"
+  />
+  <Option
+    icon="translate"
+    onPress={[Function]}
+    title="Translated[translation:language]({})"
+  />
+</List.Section>
+`;

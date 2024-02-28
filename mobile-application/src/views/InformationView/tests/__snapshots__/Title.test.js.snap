@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title component renders the component as expected 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "row",
+      "width": "50%",
+    }
+  }
+>
+  <List.Icon
+    icon="information"
+  />
+  <Text
+    style={
+      {
+        "fontSize": 16,
+        "paddingLeft": 10,
+      }
+    }
+  >
+    Translated[translation:details]({})
+  </Text>
+</View>
+`;

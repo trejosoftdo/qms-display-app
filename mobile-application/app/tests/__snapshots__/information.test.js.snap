@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Information route component renders the component as expected 1`] = `
+<React.Fragment>
+  <AppHeader
+    title="Translated[translation:information]({})"
+  />
+  <InformationView />
+</React.Fragment>
+`;

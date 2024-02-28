@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Value component renders the component with the provided props as expected 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "borderColor": "#d4d4d4",
+      "borderRadius": 8,
+      "borderWidth": 1,
+      "display": "flex",
+      "flexDirection": "column",
+      "justifyContent": "center",
+      "marginBottom": 32,
+      "maxWidth": 280,
+      "padding": 16,
+      "width": "80%",
+    }
+  }
+>
+  <Avatar.Icon
+    icon="lock"
+    style={
+      {
+        "backgroundColor": "#2929cc",
+      }
+    }
+  />
+  <ForwardRef(Text)
+    style={
+      {
+        "color": "#3c3744",
+        "fontWeight": "600",
+        "paddingTop": 12,
+      }
+    }
+    variant="headlineLarge"
+  >
+    Test value
+  </ForwardRef(Text)>
+</View>
+`;

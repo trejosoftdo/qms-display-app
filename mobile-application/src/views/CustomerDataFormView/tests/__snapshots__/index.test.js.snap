@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomerDataFormView component renders the component as expected 1`] = `
+<AppView
+  headerMessage="Translated[translation:customerDataFormMessage]({})"
+>
+  <CustomerDataForm
+    onSubmit={[Function]}
+  />
+</AppView>
+`;

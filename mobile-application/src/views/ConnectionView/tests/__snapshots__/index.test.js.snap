@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConnectionView component renders the component as expected when having the device code 1`] = `
+<AppView
+  headerMessage="Translated[mock-message-key]({})"
+  loading={true}
+>
+  <ConditionalContainer
+    display={true}
+  >
+    <ActionButton
+      icon="connection"
+      message="Translated[translation:reconnect]({})"
+      onPress={[Function]}
+    />
+  </ConditionalContainer>
+  <ConditionalContainer
+    display={false}
+  >
+    <ConnectForm
+      onSubmit={[Function]}
+    />
+  </ConditionalContainer>
+  <ConditionalContainer>
+    <VerificationQRCode />
+    <Value
+      icon="lock"
+    />
+  </ConditionalContainer>
+  <ConditionalContainer
+    display={false}
+  >
+    <ActionButton
+      icon="arrow-left-top"
+      message="Translated[translation:return]({})"
+      onPress={[Function]}
+    />
+  </ConditionalContainer>
+</AppView>
+`;
+
+exports[`ConnectionView component renders the component as expected when having the device code, user code and verification uri 1`] = `
+<AppView
+  headerMessage="Translated[mock-message-key]({})"
+  loading={true}
+>
+  <ConditionalContainer
+    display={true}
+  >
+    <ActionButton
+      icon="connection"
+      message="Translated[translation:reconnect]({})"
+      onPress={[Function]}
+    />
+  </ConditionalContainer>
+  <ConditionalContainer
+    display={false}
+  >
+    <ConnectForm
+      onSubmit={[Function]}
+    />
+  </ConditionalContainer>
+  <ConditionalContainer
+    display={true}
+  >
+    <VerificationQRCode
+      verificationURI="https://test-verification-uri.test"
+    />
+    <Value
+      icon="lock"
+      value="mock-user-code"
+    />
+  </ConditionalContainer>
+  <ConditionalContainer
+    display={false}
+  >
+    <ActionButton
+      icon="arrow-left-top"
+      message="Translated[translation:return]({})"
+      onPress={[Function]}
+    />
+  </ConditionalContainer>
+</AppView>
+`;
+
+exports[`ConnectionView component renders the component as expected when having the device code, user code, verification uri and access token 1`] = `
+<AppView
+  headerMessage="Translated[mock-message-key]({})"
+  loading={true}
+>
+  <ConditionalContainer
+    display={true}
+  >
+    <ActionButton
+      icon="connection"
+      message="Translated[translation:reconnect]({})"
+      onPress={[Function]}
+    />
+  </ConditionalContainer>
+  <ConditionalContainer
+    display={false}
+  >
+    <ConnectForm
+      onSubmit={[Function]}
+    />
+  </ConditionalContainer>
+  <ConditionalContainer
+    display={false}
+  >
+    <VerificationQRCode
+      verificationURI="https://test-verification-uri.test"
+    />
+    <Value
+      icon="lock"
+      value="mock-user-code"
+    />
+  </ConditionalContainer>
+  <ConditionalContainer
+    display={true}
+  >
+    <ActionButton
+      icon="arrow-left-top"
+      message="Translated[translation:return]({})"
+      onPress={[Function]}
+    />
+  </ConditionalContainer>
+</AppView>
+`;
+
+exports[`ConnectionView component renders the component as expected when loading 1`] = `
+<AppView
+  headerMessage="Translated[mock-message-key]({})"
+  loading={true}
+>
+  <ConditionalContainer
+    display={false}
+  >
+    <ActionButton
+      icon="connection"
+      message="Translated[translation:reconnect]({})"
+      onPress={[Function]}
+    />
+  </ConditionalContainer>
+  <ConditionalContainer
+    display={true}
+  >
+    <ConnectForm
+      onSubmit={[Function]}
+    />
+  </ConditionalContainer>
+  <ConditionalContainer>
+    <VerificationQRCode />
+    <Value
+      icon="lock"
+    />
+  </ConditionalContainer>
+  <ConditionalContainer
+    display={false}
+  >
+    <ActionButton
+      icon="arrow-left-top"
+      message="Translated[translation:return]({})"
+      onPress={[Function]}
+    />
+  </ConditionalContainer>
+</AppView>
+`;

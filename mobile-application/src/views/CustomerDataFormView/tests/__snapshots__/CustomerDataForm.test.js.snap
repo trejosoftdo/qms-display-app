@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomerDataForm component renders the component as expected 1`] = `
+<Card
+  mode="outlined"
+  style={
+    {
+      "backgroundColor": "#ffffff",
+      "maxWidth": 500,
+      "width": "100%",
+    }
+  }
+>
+  <Card.Content>
+    <ForwardRef
+      label="Translated[translation:name]({})"
+      left={
+        <TextInput.Icon
+          forceTextInputFocus={true}
+          icon="account"
+        />
+      }
+      mode="flat"
+      onChangeText={[Function]}
+      style={
+        {
+          "backgroundColor": "#ffffff",
+        }
+      }
+      value=""
+    />
+  </Card.Content>
+  <Card.Actions
+    style={
+      {
+        "marginBottom": 10,
+        "marginTop": 10,
+        "paddingRight": 16,
+      }
+    }
+  >
+    <ActionButton
+      icon="page-next"
+      message="Translated[translation:continue]({})"
+      onPress={[Function]}
+    />
+  </Card.Actions>
+</Card>
+`;

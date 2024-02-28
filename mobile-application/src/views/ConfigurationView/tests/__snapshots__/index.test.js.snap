@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConfigurationView component renders the component as expected 1`] = `
+<AppView
+  headerMessage="Translated[translation:configMessage]({})"
+  loading={false}
+>
+  <Options
+    onOptionSelect={[Function]}
+  />
+</AppView>
+`;

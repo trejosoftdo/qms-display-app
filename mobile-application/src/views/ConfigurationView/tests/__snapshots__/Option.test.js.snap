@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Option component renders the component as expected 1`] = `
+<List.Item
+  left={[Function]}
+  onPress={[MockFunction]}
+  right={[Function]}
+  title="mock-title"
+/>
+`;

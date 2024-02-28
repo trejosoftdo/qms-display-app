@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component renders the component with the provided props as expected 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#ffffff",
+      "justifyContent": "center",
+      "maxWidth": 500,
+      "width": "100%",
+    }
+  }
+>
+  <Image
+    source={1}
+    style={
+      {
+        "height": 200,
+        "width": 200,
+      }
+    }
+  />
+  <ForwardRef(Text)
+    style={
+      {
+        "color": "#3c3744",
+        "paddingBottom": 32,
+        "textAlign": "justify",
+      }
+    }
+    variant="titleMedium"
+  >
+    Test Message
+  </ForwardRef(Text)>
+</View>
+`;

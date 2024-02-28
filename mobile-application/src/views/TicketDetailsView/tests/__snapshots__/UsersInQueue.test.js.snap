@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UsersInQueue component renders the component as expected with the given props 1`] = `
+<ForwardRef(Text)
+  style={
+    {
+      "paddingBottom": 32,
+    }
+  }
+  variant="titleMedium"
+>
+  Translated[translation:usersInQueue]({"total":16})
+</ForwardRef(Text)>
+`;

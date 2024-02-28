@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorMessage component renders with no provided props as expected 1`] = `
+<ForwardRef(Text)
+  style={
+    {
+      "backgroundColor": "#feeef4",
+      "borderColor": "#cc426a",
+      "borderRadius": 5,
+      "borderWidth": 1,
+      "color": "#cc426a",
+      "margin": 8,
+      "padding": 16,
+      "paddingBottom": 32,
+    }
+  }
+  variant="titleMedium"
+>
+  Translated[translation:defaultErrorMessage]({})
+</ForwardRef(Text)>
+`;
