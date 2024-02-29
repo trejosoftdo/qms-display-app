@@ -61,3 +61,11 @@ export const TRANSLATION_SUCCESS_CONNECTION_MESSAGE_KEY = 'translation:successCo
 export const TRANSLATION_TO_CONNECT_MESSAGE_KEY = 'translation:toConnectMessage';
 
 export const TRANSLATION_INITIAL_CONNECT_MESSAGE_KEY = 'translation:initialConnetMessage';
+
+export const TRANSLATION_NEXT_TURNS_KEY = 'translation:nextTurns';
+
+export const TRANSLATION_TURN_KEY = 'translation:turn';
+
+export const TRANSLATION_POSITION_KEY = 'translation:turn';
+
+export const TRANSLATION_TO_KEY = 'translation:to';

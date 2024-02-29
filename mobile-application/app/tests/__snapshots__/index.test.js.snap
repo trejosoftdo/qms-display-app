@@ -4,8 +4,7 @@ exports[`Home route component renders the component as expected 1`] = `
 <React.Fragment>
   <AppHeader
     headerRight={[Function]}
-    title="Translated[translation:customerData]({})"
   />
-  <CustomerDataFormView />
+  <TurnsStatusTableView />
 </React.Fragment>
 `;

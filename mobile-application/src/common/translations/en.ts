@@ -32,6 +32,10 @@ export default {
     language: 'Language',
     languageMessage: 'Select the language of your preference:',
     spanish: 'Spanish',
-    english: 'English'
+    english: 'English',
+    nextTurns: 'Next Turns',
+    turn: 'Turn',
+    position: 'Position',
+    to: 'to',
   },
 };

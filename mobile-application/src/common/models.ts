@@ -1,30 +1,10 @@
-export type ServicesData = {
-  total: number;
+export type TurnsStatusTableData = {
   items: {
-    id: string;
-    name: string;
-    label: string;
-    icon: string;
+    ticketNumber: string;
+    queueName: string;
+    statusName: string;
+    statusCode: string;
   }[];
-};
-
-export type CategoriesData = {
-  total: number;
-  items: {
-    id: string;
-    name: string;
-    label: string;
-    icon: string;
-  }[];
-};
-
-export type TicketDetailsData = {
-  details: {
-    id: string;
-    service: string;
-    value: string;
-  };
-  usersInQueue: number;
 };
 
 export type DeviceConnectionData = {

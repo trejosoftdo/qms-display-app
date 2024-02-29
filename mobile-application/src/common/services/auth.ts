@@ -44,7 +44,7 @@ export const getTokensForDevice = async (applicationId: string, deviceCode: stri
   } catch (error) {
     if (error?.status === VALIDATION_ERROR_STATUS_CODE) {
       const data = await error.json();
-      if (data?.detail?.code === AUTHORIZATION_PENDING_CODE) {
+      if (data?.code === AUTHORIZATION_PENDING_CODE) {
         return { pending: true };
       }
     }

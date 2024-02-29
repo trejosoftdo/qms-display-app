@@ -16,7 +16,7 @@ import ErrorMessage from './ErrorMessage';
  * @property error - to show a error message
  */
 interface AppViewProps {
-  headerMessage: string;
+  headerMessage?: string;
   children: React.ReactNode;
   loading?: boolean;
   error?: Error;
@@ -29,7 +29,7 @@ interface AppViewProps {
  */
 const AppView: React.FC<AppViewProps> = (props: AppViewProps) => (
   <View style={styles.container}>
-    <Header message={props.headerMessage} />
+    {props.headerMessage && <Header message={props.headerMessage} />}
     {props.loading && <LoadingIndicator loading={props.loading} />}
     {props.children}
     {props.error && <ErrorMessage />}
