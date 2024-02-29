@@ -1,5 +1,7 @@
 import * as React from 'react';
+import { Image, StyleSheet } from 'react-native';
 import { Stack } from 'expo-router';
+import icon from '../../../assets/header-icon.png';
 import AppLightTheme from '../theme';
 
 
@@ -11,7 +13,6 @@ import AppLightTheme from '../theme';
  */
 
 type AppHeaderProps = {
-  title: string;
   headerRight?: () => React.ReactNode;
 };
 
@@ -24,7 +25,9 @@ type AppHeaderProps = {
 const AppHeader: React.FC<AppHeaderProps> = (props: AppHeaderProps) => (
   <Stack.Screen
     options={{
-      title: props.title,
+      title: (
+        <Image source={icon} style={styles.icon} />
+      ),
       headerStyle: {
         backgroundColor: AppLightTheme.colors.primary,
       },
@@ -39,5 +42,13 @@ const AppHeader: React.FC<AppHeaderProps> = (props: AppHeaderProps) => (
     }}
   />
 );
+
+const styles = StyleSheet.create({
+  icon: {
+    height: 50,
+    width: 119,
+  },
+});
+
 
 export default AppHeader;

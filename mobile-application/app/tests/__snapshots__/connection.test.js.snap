@@ -2,9 +2,7 @@
 
 exports[`Connection route component renders the component as expected 1`] = `
 <React.Fragment>
-  <AppHeader
-    title="Translated[translation:connection]({})"
-  />
+  <AppHeader />
   <ConnectionView />
 </React.Fragment>
 `;

@@ -17,7 +17,15 @@ exports[`AppHeader component renders the component with the provided props as ex
       "headerTitleStyle": {
         "fontFamily": "Montserrat-Regular",
       },
-      "title": "Test title",
+      "title": <Image
+        source={1}
+        style={
+          {
+            "height": 50,
+            "width": 119,
+          }
+        }
+      />,
     }
   }
 />

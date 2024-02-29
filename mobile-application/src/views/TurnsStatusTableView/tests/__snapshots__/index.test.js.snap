@@ -1,0 +1,284 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TurnsStatusTableView component renders the component as expected when data has been loaded 1`] = `
+<AppView
+  loading={false}
+>
+  <ConditionalContainer
+    display={true}
+  >
+    <View
+      style={
+        {
+          "alignItems": "flex-start",
+          "display": "flex",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "paddingTop": 50,
+          "width": "100%",
+        }
+      }
+    >
+      <DataTable
+        style={
+          {
+            "backgroundColor": "#fff",
+            "width": "60%",
+          }
+        }
+      >
+        <DataTable.Header
+          style={
+            {
+              "backgroundColor": "#b4c5e4",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          <DataTable.Title
+            textStyle={
+              {
+                "color": "#000",
+                "fontSize": 20,
+                "fontWeight": 600,
+              }
+            }
+          >
+            Turno
+          </DataTable.Title>
+          <DataTable.Title
+            textStyle={
+              {
+                "color": "#000",
+                "fontSize": 20,
+                "fontWeight": 600,
+              }
+            }
+          >
+            Posición
+          </DataTable.Title>
+        </DataTable.Header>
+      </DataTable>
+      <DataTable
+        style={
+          {
+            "backgroundColor": "#fff",
+            "width": "30%",
+          }
+        }
+      >
+        <DataTable.Header
+          style={
+            {
+              "backgroundColor": "#b4c5e4",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          <DataTable.Title
+            textStyle={
+              {
+                "color": "#000",
+                "fontSize": 20,
+                "fontWeight": 600,
+              }
+            }
+          >
+            Próximos Turnos
+          </DataTable.Title>
+        </DataTable.Header>
+      </DataTable>
+    </View>
+  </ConditionalContainer>
+</AppView>
+`;
+
+exports[`TurnsStatusTableView component renders the component as expected when it has errors 1`] = `
+<AppView
+  error={[Error: Unexpected error]}
+  loading={false}
+>
+  <ConditionalContainer
+    display={false}
+  >
+    <View
+      style={
+        {
+          "alignItems": "flex-start",
+          "display": "flex",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "paddingTop": 50,
+          "width": "100%",
+        }
+      }
+    >
+      <DataTable
+        style={
+          {
+            "backgroundColor": "#fff",
+            "width": "60%",
+          }
+        }
+      >
+        <DataTable.Header
+          style={
+            {
+              "backgroundColor": "#b4c5e4",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          <DataTable.Title
+            textStyle={
+              {
+                "color": "#000",
+                "fontSize": 20,
+                "fontWeight": 600,
+              }
+            }
+          >
+            Turno
+          </DataTable.Title>
+          <DataTable.Title
+            textStyle={
+              {
+                "color": "#000",
+                "fontSize": 20,
+                "fontWeight": 600,
+              }
+            }
+          >
+            Posición
+          </DataTable.Title>
+        </DataTable.Header>
+      </DataTable>
+      <DataTable
+        style={
+          {
+            "backgroundColor": "#fff",
+            "width": "30%",
+          }
+        }
+      >
+        <DataTable.Header
+          style={
+            {
+              "backgroundColor": "#b4c5e4",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          <DataTable.Title
+            textStyle={
+              {
+                "color": "#000",
+                "fontSize": 20,
+                "fontWeight": 600,
+              }
+            }
+          >
+            Próximos Turnos
+          </DataTable.Title>
+        </DataTable.Header>
+      </DataTable>
+    </View>
+  </ConditionalContainer>
+</AppView>
+`;
+
+exports[`TurnsStatusTableView component renders the component as expected when loading 1`] = `
+<AppView
+  loading={true}
+>
+  <ConditionalContainer
+    display={false}
+  >
+    <View
+      style={
+        {
+          "alignItems": "flex-start",
+          "display": "flex",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "paddingTop": 50,
+          "width": "100%",
+        }
+      }
+    >
+      <DataTable
+        style={
+          {
+            "backgroundColor": "#fff",
+            "width": "60%",
+          }
+        }
+      >
+        <DataTable.Header
+          style={
+            {
+              "backgroundColor": "#b4c5e4",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          <DataTable.Title
+            textStyle={
+              {
+                "color": "#000",
+                "fontSize": 20,
+                "fontWeight": 600,
+              }
+            }
+          >
+            Turno
+          </DataTable.Title>
+          <DataTable.Title
+            textStyle={
+              {
+                "color": "#000",
+                "fontSize": 20,
+                "fontWeight": 600,
+              }
+            }
+          >
+            Posición
+          </DataTable.Title>
+        </DataTable.Header>
+      </DataTable>
+      <DataTable
+        style={
+          {
+            "backgroundColor": "#fff",
+            "width": "30%",
+          }
+        }
+      >
+        <DataTable.Header
+          style={
+            {
+              "backgroundColor": "#b4c5e4",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          <DataTable.Title
+            textStyle={
+              {
+                "color": "#000",
+                "fontSize": 20,
+                "fontWeight": 600,
+              }
+            }
+          >
+            Próximos Turnos
+          </DataTable.Title>
+        </DataTable.Header>
+      </DataTable>
+    </View>
+  </ConditionalContainer>
+</AppView>
+`;

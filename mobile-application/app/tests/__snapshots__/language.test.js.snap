@@ -2,9 +2,7 @@
 
 exports[`Language route component renders the component as expected 1`] = `
 <React.Fragment>
-  <AppHeader
-    title="Translated[translation:language]({})"
-  />
+  <AppHeader />
   <LanguageViewView />
 </React.Fragment>
 `;

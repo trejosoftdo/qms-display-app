@@ -4,6 +4,6 @@ import Home from '../';
 
 describe('Home route component', () => {
   it('renders the component as expected', () => {
-    expect(renderShallow(<Home />)).toMatchSnapshot();
+    expect(renderShallow(<Home  />)).toMatchSnapshot();
   });
 });

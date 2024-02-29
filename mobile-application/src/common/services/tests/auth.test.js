@@ -87,9 +87,7 @@ describe('Auth service', () => {
       const mockValidationError = {
         status: VALIDATION_ERROR_STATUS_CODE,
         json: () => Promise.resolve({
-          detail: {
-            code: AUTHORIZATION_PENDING_CODE,
-          },
+          code: AUTHORIZATION_PENDING_CODE,
         }),
       };
       mockAppInstance.getAuthTokens.mockRejectedValue(mockValidationError);
@@ -104,9 +102,7 @@ describe('Auth service', () => {
     it('fails for any other errors that are not pending authorization code', async () => {
       const mockValidationError = {
         status: VALIDATION_ERROR_STATUS_CODE,
-        json: () => Promise.resolve({
-          detail: {},
-        }),
+        json: () => Promise.resolve({}),
       };
       mockAppInstance.getAuthTokens.mockRejectedValue(mockValidationError);
       await expect(() => getTokensForDevice(mockApplicationId, mockDeviceCode)).rejects.toEqual(mockValidationError);
