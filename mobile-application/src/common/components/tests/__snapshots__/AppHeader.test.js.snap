@@ -14,18 +14,10 @@ exports[`AppHeader component renders the component with the provided props as ex
         "backgroundColor": "#2929cc",
       },
       "headerTintColor": "#ffffff",
+      "headerTitle": [Function],
       "headerTitleStyle": {
         "fontFamily": "Montserrat-Regular",
       },
-      "title": <Image
-        source={1}
-        style={
-          {
-            "height": 50,
-            "width": 119,
-          }
-        }
-      />,
     }
   }
 />

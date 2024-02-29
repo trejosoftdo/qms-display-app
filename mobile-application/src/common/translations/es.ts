@@ -36,5 +36,6 @@ export default {
     nextTurns: 'Próximos Turnos',
     turn: 'Turno',
     position: 'Posición',
+    to: 'a',
   },
 };

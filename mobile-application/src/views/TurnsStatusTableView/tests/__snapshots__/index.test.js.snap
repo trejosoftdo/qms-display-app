@@ -41,7 +41,7 @@ exports[`TurnsStatusTableView component renders the component as expected when d
               {
                 "color": "#000",
                 "fontSize": 20,
-                "fontWeight": 600,
+                "fontWeight": "600",
               }
             }
           >
@@ -52,7 +52,7 @@ exports[`TurnsStatusTableView component renders the component as expected when d
               {
                 "color": "#000",
                 "fontSize": 20,
-                "fontWeight": 600,
+                "fontWeight": "600",
               }
             }
           >
@@ -81,7 +81,7 @@ exports[`TurnsStatusTableView component renders the component as expected when d
               {
                 "color": "#000",
                 "fontSize": 20,
-                "fontWeight": 600,
+                "fontWeight": "600",
               }
             }
           >
@@ -136,7 +136,7 @@ exports[`TurnsStatusTableView component renders the component as expected when i
               {
                 "color": "#000",
                 "fontSize": 20,
-                "fontWeight": 600,
+                "fontWeight": "600",
               }
             }
           >
@@ -147,7 +147,7 @@ exports[`TurnsStatusTableView component renders the component as expected when i
               {
                 "color": "#000",
                 "fontSize": 20,
-                "fontWeight": 600,
+                "fontWeight": "600",
               }
             }
           >
@@ -176,7 +176,7 @@ exports[`TurnsStatusTableView component renders the component as expected when i
               {
                 "color": "#000",
                 "fontSize": 20,
-                "fontWeight": 600,
+                "fontWeight": "600",
               }
             }
           >
@@ -230,7 +230,7 @@ exports[`TurnsStatusTableView component renders the component as expected when l
               {
                 "color": "#000",
                 "fontSize": 20,
-                "fontWeight": 600,
+                "fontWeight": "600",
               }
             }
           >
@@ -241,7 +241,7 @@ exports[`TurnsStatusTableView component renders the component as expected when l
               {
                 "color": "#000",
                 "fontSize": 20,
-                "fontWeight": 600,
+                "fontWeight": "600",
               }
             }
           >
@@ -270,7 +270,7 @@ exports[`TurnsStatusTableView component renders the component as expected when l
               {
                 "color": "#000",
                 "fontSize": 20,
-                "fontWeight": 600,
+                "fontWeight": "600",
               }
             }
           >

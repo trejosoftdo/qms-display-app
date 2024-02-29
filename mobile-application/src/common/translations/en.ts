@@ -36,5 +36,6 @@ export default {
     nextTurns: 'Next Turns',
     turn: 'Turn',
     position: 'Position',
+    to: 'to',
   },
 };

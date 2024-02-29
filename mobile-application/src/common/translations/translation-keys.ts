@@ -67,3 +67,5 @@ export const TRANSLATION_NEXT_TURNS_KEY = 'translation:nextTurns';
 export const TRANSLATION_TURN_KEY = 'translation:turn';
 
 export const TRANSLATION_POSITION_KEY = 'translation:turn';
+
+export const TRANSLATION_TO_KEY = 'translation:to';
