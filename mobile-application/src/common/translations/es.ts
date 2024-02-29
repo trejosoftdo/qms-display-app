@@ -32,6 +32,9 @@ export default {
     language: 'Idioma',
     languageMessage: 'Selecciona el idioma de tu preferencia:',
     spanish: 'Español',
-    english: 'Inglés'
+    english: 'Inglés',
+    nextTurns: 'Próximos Turnos',
+    turn: 'Turno',
+    position: 'Posición',
   },
 };

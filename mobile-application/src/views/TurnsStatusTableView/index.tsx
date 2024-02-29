@@ -4,13 +4,18 @@ import { View, StyleSheet } from 'react-native';
 import { DataTable } from 'react-native-paper';
 import { AppView, Cards, ConditionalContainer } from '../../common/components';
 import useTurnsStatusTable from '../../hooks/useTurnsStatusTable';
-import { TRANSLATION_CHOOSE_CATEGORY_MESSAGE_KEY, TRANSLATION_WAIT_MESSAGE_KEY } from '../../common/translations/translation-keys';
-
+import {
+  TRANSLATION_NEXT_TURNS_KEY,
+  TRANSLATION_TURN_KEY,
+  TRANSLATION_POSITION_KEY,
+  TRANSLATION_WAIT_MESSAGE_KEY,
+} from '../../common/translations/translation-keys';
+import { BEING_ATTENDED_STATUS_CODE, TO_BE_ATTENDED_STATUS_CODE } from './constants';
 
 /**
  * TurnsStatusTableViewProps defines the props for the Component.
  */
-interface TurnsStatusTableViewProps {}
+interface TurnsStatusTableViewProps { }
 
 /**
  * A component that represents the view to display the turns status table
@@ -25,6 +30,9 @@ const TurnsStatusTableView: React.FC<TurnsStatusTableViewProps> = (props: TurnsS
   } = useTurnsStatusTable();
   const { t } = useTranslation();
   const messageKey = loading ? TRANSLATION_WAIT_MESSAGE_KEY : "";
+  const beingAttendedItems = data?.items?.filter(item => item.statusCode === BEING_ATTENDED_STATUS_CODE);
+  const toBeAttendedItems = data?.items?.filter(item => item.statusCode === TO_BE_ATTENDED_STATUS_CODE);
+
   return (
     <AppView
       loading={loading}
@@ -34,11 +42,15 @@ const TurnsStatusTableView: React.FC<TurnsStatusTableViewProps> = (props: TurnsS
         <View style={styles.content}>
           <DataTable style={styles.beingAttended}>
             <DataTable.Header style={styles.header}>
-              <DataTable.Title textStyle={styles.title}>Turno</DataTable.Title>
-              <DataTable.Title textStyle={styles.title}>Posición</DataTable.Title>
+              <DataTable.Title textStyle={styles.title}>
+                {t(TRANSLATION_TURN_KEY)}
+              </DataTable.Title>
+              <DataTable.Title textStyle={styles.title}>
+                {t(TRANSLATION_POSITION_KEY)}
+              </DataTable.Title>
             </DataTable.Header>
 
-            {data?.items?.filter(item => item.statusCode === "BEING_ATTENDED").map((item) => (
+            {beingAttendedItems?.map((item) => (
               <DataTable.Row key={item.ticketNumber}>
                 <DataTable.Cell textStyle={styles.cell}>{item.ticketNumber}</DataTable.Cell>
                 <DataTable.Cell textStyle={styles.cell}>{item.queueName}</DataTable.Cell>
@@ -48,10 +60,12 @@ const TurnsStatusTableView: React.FC<TurnsStatusTableViewProps> = (props: TurnsS
 
           <DataTable style={styles.toBeAttended}>
             <DataTable.Header style={styles.header}>
-              <DataTable.Title textStyle={styles.title}>Próximos Turnos</DataTable.Title>
+              <DataTable.Title textStyle={styles.title}>
+                {t(TRANSLATION_NEXT_TURNS_KEY)}
+              </DataTable.Title>
             </DataTable.Header>
 
-            {data?.items?.filter(item => item.statusCode === "TO_BE_ATTENDED").map((item) => (
+            {toBeAttendedItems?.map((item) => (
               <DataTable.Row key={item.ticketNumber}>
                 <DataTable.Cell textStyle={styles.cell}>{item.ticketNumber} a {item.queueName}</DataTable.Cell>
               </DataTable.Row>

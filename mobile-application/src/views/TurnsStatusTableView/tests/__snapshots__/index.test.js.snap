@@ -45,7 +45,7 @@ exports[`TurnsStatusTableView component renders the component as expected when d
               }
             }
           >
-            Turno
+            Translated[translation:turn]({})
           </DataTable.Title>
           <DataTable.Title
             textStyle={
@@ -56,7 +56,7 @@ exports[`TurnsStatusTableView component renders the component as expected when d
               }
             }
           >
-            Posición
+            Translated[translation:turn]({})
           </DataTable.Title>
         </DataTable.Header>
       </DataTable>
@@ -85,7 +85,7 @@ exports[`TurnsStatusTableView component renders the component as expected when d
               }
             }
           >
-            Próximos Turnos
+            Translated[translation:nextTurns]({})
           </DataTable.Title>
         </DataTable.Header>
       </DataTable>
@@ -140,7 +140,7 @@ exports[`TurnsStatusTableView component renders the component as expected when i
               }
             }
           >
-            Turno
+            Translated[translation:turn]({})
           </DataTable.Title>
           <DataTable.Title
             textStyle={
@@ -151,7 +151,7 @@ exports[`TurnsStatusTableView component renders the component as expected when i
               }
             }
           >
-            Posición
+            Translated[translation:turn]({})
           </DataTable.Title>
         </DataTable.Header>
       </DataTable>
@@ -180,7 +180,7 @@ exports[`TurnsStatusTableView component renders the component as expected when i
               }
             }
           >
-            Próximos Turnos
+            Translated[translation:nextTurns]({})
           </DataTable.Title>
         </DataTable.Header>
       </DataTable>
@@ -234,7 +234,7 @@ exports[`TurnsStatusTableView component renders the component as expected when l
               }
             }
           >
-            Turno
+            Translated[translation:turn]({})
           </DataTable.Title>
           <DataTable.Title
             textStyle={
@@ -245,7 +245,7 @@ exports[`TurnsStatusTableView component renders the component as expected when l
               }
             }
           >
-            Posición
+            Translated[translation:turn]({})
           </DataTable.Title>
         </DataTable.Header>
       </DataTable>
@@ -274,7 +274,7 @@ exports[`TurnsStatusTableView component renders the component as expected when l
               }
             }
           >
-            Próximos Turnos
+            Translated[translation:nextTurns]({})
           </DataTable.Title>
         </DataTable.Header>
       </DataTable>
