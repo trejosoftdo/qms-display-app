@@ -36,6 +36,10 @@ describe('useTurnsStatusTable hook', () => {
     expect(loadTurnsStatusTable).toHaveBeenCalledTimes(1);
     expect(loadTurnsStatusTable).toHaveBeenCalledWith();
     expect(useProgress).toHaveBeenCalledTimes(1);
-    expect(useProgress).toHaveBeenCalledWith(expect.any(Promise));
+    expect(useProgress).toHaveBeenCalledWith(
+      expect.any(Promise),
+      null,
+      expect.any(Function),
+    );
   });
 });
