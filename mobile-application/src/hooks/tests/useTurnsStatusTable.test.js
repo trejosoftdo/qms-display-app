@@ -41,5 +41,9 @@ describe('useTurnsStatusTable hook', () => {
       null,
       expect.any(Function),
     );
+
+    await useProgress.mock.calls[0][2]();
+    expect(loadTurnsStatusTable).toHaveBeenCalledTimes(2);
+    expect(loadTurnsStatusTable).toHaveBeenCalledWith();
   });
 });

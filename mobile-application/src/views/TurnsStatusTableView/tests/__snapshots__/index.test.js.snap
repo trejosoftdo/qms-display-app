@@ -59,6 +59,30 @@ exports[`TurnsStatusTableView component renders the component as expected when d
             Translated[translation:turn]({})
           </DataTable.Title>
         </DataTable.Header>
+        <DataTable.Row>
+          <DataTable.Cell
+            textStyle={
+              {
+                "color": "#000",
+                "fontSize": 18,
+                "fontWeight": "600",
+              }
+            }
+          >
+            mock-first-ticket-number
+          </DataTable.Cell>
+          <DataTable.Cell
+            textStyle={
+              {
+                "color": "#000",
+                "fontSize": 18,
+                "fontWeight": "600",
+              }
+            }
+          >
+            mock-first-queue-name
+          </DataTable.Cell>
+        </DataTable.Row>
       </DataTable>
       <DataTable
         style={
@@ -88,6 +112,23 @@ exports[`TurnsStatusTableView component renders the component as expected when d
             Translated[translation:nextTurns]({})
           </DataTable.Title>
         </DataTable.Header>
+        <DataTable.Row>
+          <DataTable.Cell
+            textStyle={
+              {
+                "color": "#000",
+                "fontSize": 18,
+                "fontWeight": "600",
+              }
+            }
+          >
+            mock-second-ticket-number
+             
+            Translated[translation:to]({})
+             
+            mock-second-queue-name
+          </DataTable.Cell>
+        </DataTable.Row>
       </DataTable>
     </View>
   </ConditionalContainer>

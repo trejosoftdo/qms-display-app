@@ -2,6 +2,7 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import useTurnsStatusTable from '../../../hooks/useTurnsStatusTable';
 import TurnsStatusTableView from '../';
+import { BEING_ATTENDED_STATUS_CODE, TO_BE_ATTENDED_STATUS_CODE } from '../constants';
 
 
 jest.mock('expo-router');
@@ -14,11 +15,18 @@ describe('TurnsStatusTableView component', () => {
     customerName: 'customer-name',
   };
   const mockData = {
-    items: [{
-      id: 'mock-id',
-      name: 'mock-name',
-      label: 'mock-label',
-    }],
+    items: [
+      {
+        ticketNumber: 'mock-first-ticket-number',
+        queueName: 'mock-first-queue-name',
+        statusCode: BEING_ATTENDED_STATUS_CODE,
+      },
+      {
+        ticketNumber: 'mock-second-ticket-number',
+        queueName: 'mock-second-queue-name',
+        statusCode: TO_BE_ATTENDED_STATUS_CODE,
+      },
+    ],
   };
 
   afterEach(() => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import AppHeader from '../AppHeader';
+import AppHeader, { headerTitle } from '../AppHeader';
 
 
 describe('AppHeader component', () => {
@@ -11,5 +11,9 @@ describe('AppHeader component', () => {
 
   it('renders the component with the provided props as expected', () => {
     expect(renderShallow(<AppHeader {...props} />)).toMatchSnapshot();
+  });
+
+  it('renders the header title component as expected', () => {
+    expect(renderShallow(headerTitle())).toMatchSnapshot();
   });
 });

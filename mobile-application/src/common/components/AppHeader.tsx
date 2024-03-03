@@ -21,6 +21,8 @@ type AppHeaderProps = {
   headerRight?: () => React.ReactNode;
 };
 
+export const headerTitle = () => <Image source={icon} style={styles.icon} />;
+
 /**
  * A component represents the application header
  *
@@ -29,7 +31,7 @@ type AppHeaderProps = {
 const AppHeader: React.FC<AppHeaderProps> = (props: AppHeaderProps) => (
   <Stack.Screen
     options={{
-      headerTitle: () => <Image source={icon} style={styles.icon} />,
+      headerTitle,
       headerStyle: {
         backgroundColor: AppLightTheme.colors.primary,
       },
