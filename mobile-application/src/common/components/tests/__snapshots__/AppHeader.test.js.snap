@@ -22,3 +22,15 @@ exports[`AppHeader component renders the component with the provided props as ex
   }
 />
 `;
+
+exports[`AppHeader component renders the header title component as expected 1`] = `
+<Image
+  source={1}
+  style={
+    {
+      "height": 50,
+      "width": 119,
+    }
+  }
+/>
+`;

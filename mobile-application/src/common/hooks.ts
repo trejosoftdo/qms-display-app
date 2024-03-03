@@ -51,24 +51,24 @@ export const useProgress = <T>(
   const [data, setData] = useState<T | null>(null);
   const [refreshing, setRefreshing] = useState<boolean>(false);
 
+  const updateData = (data) => {
+    if (mapper) {
+      setData(mapper(data));
+    } else {
+      setData(data);
+    }
+  };
+
+  const updateError = (error) => {
+    setError(error);
+  };
+
+
   useEffect(() => {
-    if (!loading) {
-      setLoading(true);
-    }
+    setLoading(true);
+    setError(null);
 
-    if (error) {
-      setError(null);
-    }
-
-    promise.then(data => {
-      if (mapper) {
-        setData(mapper(data));
-      } else {
-        setData(data);
-      }
-    }).catch((error) => {
-      setError(error);
-    }).finally(() => {
+    promise.then(updateData).catch(updateError).finally(() => {
       setLoading(false);
     });
   }, []);
@@ -81,20 +81,9 @@ export const useProgress = <T>(
   
       if (!refreshing) {
         setRefreshing(true);
-        
-        if (error) {
-          setError(null);
-        }
+        setError(null);
 
-        refresh().then(data => {
-          if (mapper) {
-            setData(mapper(data));
-          } else {
-            setData(data);
-          }
-        }).catch((error) => {
-          setError(error);
-        }).finally(() => {
+        refresh().then(updateData).catch(updateError).finally(() => {
           setRefreshing(false);
         });
       } else {
