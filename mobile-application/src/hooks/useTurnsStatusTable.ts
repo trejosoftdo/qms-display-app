@@ -7,9 +7,9 @@ import { loadTurnsStatusTable } from "../common/services/service-turn";
  * @returns Progress<TurnsStatusTableData>
  */
 const useTurnsStatusTable = (): Progress<TurnsStatusTableData> => useProgress<TurnsStatusTableData>(
-  loadTurnsStatusTable(),
+  loadTurnsStatusTable,
   null,
-  () => loadTurnsStatusTable(),
+  true,
 );
 
 export default useTurnsStatusTable;

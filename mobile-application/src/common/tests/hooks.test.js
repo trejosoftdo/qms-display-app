@@ -6,6 +6,11 @@ const flushPromises = () => new Promise(setImmediate);
 
 
 describe('Hooks', () => {
+  const loadData = jest.fn();
+
+  afterEach(() => {
+    jest.resetAllMocks();
+  });
 
   describe('useProgress', () => {
     const mockData = {
@@ -13,8 +18,8 @@ describe('Hooks', () => {
     };
 
     it('indicates the progress of the promise', async () => {
-      const promise = Promise.resolve(mockData);
-      const { result } = renderHook(() => useProgress(promise));
+      loadData.mockResolvedValue(mockData);
+      const { result } = renderHook(() => useProgress(loadData));
       
       await act(() => flushPromises());
 
@@ -25,8 +30,8 @@ describe('Hooks', () => {
 
     it('maps the data when a mapper is specified', async () => {
       const mapper = (x) => ({ title: `Mapped: ${x.title}`});
-      const promise = Promise.resolve(mockData);
-      const { result } = renderHook(() => useProgress(promise, mapper));
+      loadData.mockResolvedValue(mockData);
+      const { result } = renderHook(() => useProgress(loadData, mapper));
       
       await act(() => flushPromises());
 
@@ -39,8 +44,8 @@ describe('Hooks', () => {
 
     it('indicates when an error has ocurred', async () => {
       const mockError = new Error('Mock error');
-      const promise = Promise.reject(mockError);
-      const { result } = renderHook(() => useProgress(promise));
+      loadData.mockRejectedValue(mockError);
+      const { result } = renderHook(() => useProgress(loadData));
       
       await act(() => flushPromises());
 
@@ -70,10 +75,8 @@ describe('Hooks', () => {
       });
       
       it('gets refresh at certain intervals', async () => {
-        const refresh = jest.fn(() => Promise.resolve(mockData));
-        const promise = Promise.resolve(null);
-        const { result } = renderHook(() => useProgress(promise, null, refresh));
-        
+        loadData.mockResolvedValue(mockData);
+        const { result } = renderHook(() => useProgress(loadData, null, true));
         
         await act(() => flushPromises());
         jest.advanceTimersByTime(INTERVAL_TIME * 2);
@@ -82,14 +85,13 @@ describe('Hooks', () => {
         expect(result.current.data).toEqual(mockData);
         expect(result.current.loading).toEqual(false);
         expect(result.current.error).toEqual(null);
-        expect(refresh).toHaveBeenCalledTimes(1);
-        expect(refresh).toHaveBeenCalledWith();
+        expect(loadData).toHaveBeenCalledTimes(2);
+        expect(loadData).toHaveBeenCalledWith();
       });
 
       it('gets does not refresh if data is initally loading', async () => {
-        const refresh = jest.fn(() => Promise.resolve(mockData));
-        const promise = Promise.resolve(mockData);
-        const { result } = renderHook(() => useProgress(promise, null, refresh));
+        loadData.mockResolvedValue(mockData);
+        const { result } = renderHook(() => useProgress(loadData, null, true));
         
         
         jest.advanceTimersByTime(INTERVAL_TIME * 2);
@@ -98,7 +100,8 @@ describe('Hooks', () => {
         expect(result.current.data).toEqual(mockData);
         expect(result.current.loading).toEqual(false);
         expect(result.current.error).toEqual(null);
-        expect(refresh).toHaveBeenCalledTimes(0);
+        expect(loadData).toHaveBeenCalledTimes(1);
+        expect(loadData).toHaveBeenCalledWith();
       });
     });
   });

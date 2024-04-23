@@ -10,10 +10,10 @@ describe('useDeviceId hook', () => {
 
   beforeEach(() => {
     getDeviceId.mockResolvedValue(mockDeviceId);
-    useProgress.mockImplementation(async (promise) => ({
+    useProgress.mockImplementation(async (load) => ({
       loading: false,
       error: null,
-      data: await promise,
+      data: await load(),
     }));
   });
 
@@ -31,6 +31,6 @@ describe('useDeviceId hook', () => {
     expect(getDeviceId).toHaveBeenCalledTimes(1);
     expect(getDeviceId).toHaveBeenCalledWith();
     expect(useProgress).toHaveBeenCalledTimes(1);
-    expect(useProgress).toHaveBeenCalledWith(expect.any(Promise));
+    expect(useProgress).toHaveBeenCalledWith(expect.any(Function));
   });
 });

@@ -37,14 +37,15 @@ export const useInterval = (callback: (interval: Interval) => void, delay: numbe
 /**
  * Hook to show the progress of a promise
  * 
- * @param  {Promise<T>} promise
+ * @param  {() => Promise<T>} loadData
  * @param  {(data:any)=>T=null} mapper
+ * @param  {boolean} refresh
  * @returns Progress<T>
  */
 export const useProgress = <T>(
-  promise: Promise<T>,
+  loadData: () => Promise<T>,
   mapper: (data: any) => T = null,
-  refresh: () => Promise<T> = null,
+  refresh: boolean = false,
 ): Progress<T> => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
@@ -68,7 +69,7 @@ export const useProgress = <T>(
     setLoading(true);
     setError(null);
 
-    promise.then(updateData).catch(updateError).finally(() => {
+    loadData().then(updateData).catch(updateError).finally(() => {
       setLoading(false);
     });
   }, []);
@@ -83,7 +84,7 @@ export const useProgress = <T>(
         setRefreshing(true);
         setError(null);
 
-        refresh().then(updateData).catch(updateError).finally(() => {
+        loadData().then(updateData).catch(updateError).finally(() => {
           setRefreshing(false);
         });
       } else {

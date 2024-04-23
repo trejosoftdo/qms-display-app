@@ -15,10 +15,10 @@ describe('useTurnsStatusTable hook', () => {
 
   beforeEach(() => {
     loadTurnsStatusTable.mockResolvedValue(mockData);
-    useProgress.mockImplementation(async (promise) => ({
+    useProgress.mockImplementation(async (load) => ({
       loading: false,
       error: null,
-      data: await promise,
+      data: await load(),
     }));
   });
 
@@ -37,13 +37,9 @@ describe('useTurnsStatusTable hook', () => {
     expect(loadTurnsStatusTable).toHaveBeenCalledWith();
     expect(useProgress).toHaveBeenCalledTimes(1);
     expect(useProgress).toHaveBeenCalledWith(
-      expect.any(Promise),
-      null,
       expect.any(Function),
+      null,
+      true
     );
-
-    await useProgress.mock.calls[0][2]();
-    expect(loadTurnsStatusTable).toHaveBeenCalledTimes(2);
-    expect(loadTurnsStatusTable).toHaveBeenCalledWith();
   });
 });
