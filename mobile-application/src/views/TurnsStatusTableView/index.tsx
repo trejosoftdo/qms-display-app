@@ -34,7 +34,6 @@ const TurnsStatusTableView: React.FC<TurnsStatusTableViewProps> = (props: TurnsS
   const messageKey = loading ? TRANSLATION_WAIT_MESSAGE_KEY : "";
   const beingAttendedItems = data?.items?.filter(item => item.statusCode === BEING_ATTENDED_STATUS_CODE);
   const toBeAttendedItems = data?.items?.filter(item => item.statusCode === TO_BE_ATTENDED_STATUS_CODE);
-
   const textItems = toBeAttendedItems?.map(item => `${item.ticketNumber} ${t(TRANSLATION_TO_KEY)} ${item.queueName}`);
     
   useTurnsMessageCalls(textItems);

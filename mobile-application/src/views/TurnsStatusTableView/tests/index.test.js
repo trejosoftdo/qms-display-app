@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import useTurnsStatusTable from '../../../hooks/useTurnsStatusTable';
+import useTurnsMessageCalls from '../../../hooks/useTurnsMessageCalls';
 import TurnsStatusTableView from '../';
 import { BEING_ATTENDED_STATUS_CODE, TO_BE_ATTENDED_STATUS_CODE } from '../constants';
 
@@ -8,6 +9,7 @@ import { BEING_ATTENDED_STATUS_CODE, TO_BE_ATTENDED_STATUS_CODE } from '../const
 jest.mock('expo-router');
 jest.mock('../../../common/helpers');
 jest.mock('../../../hooks/useTurnsStatusTable');
+jest.mock('../../../hooks/useTurnsMessageCalls');
 
 
 describe('TurnsStatusTableView component', () => {
@@ -38,6 +40,8 @@ describe('TurnsStatusTableView component', () => {
     expect(renderShallow(<TurnsStatusTableView />)).toMatchSnapshot();
     expect(useTurnsStatusTable).toHaveBeenCalledTimes(1);
     expect(useTurnsStatusTable).toHaveBeenCalledWith();
+    expect(useTurnsMessageCalls).toHaveBeenCalledTimes(1);
+    expect(useTurnsMessageCalls).toHaveBeenCalledWith(undefined);
   });
 
   it('renders the component as expected when data has been loaded', () => {
@@ -48,6 +52,8 @@ describe('TurnsStatusTableView component', () => {
     expect(renderShallow(<TurnsStatusTableView />)).toMatchSnapshot();
     expect(useTurnsStatusTable).toHaveBeenCalledTimes(1);
     expect(useTurnsStatusTable).toHaveBeenCalledWith();
+    expect(useTurnsMessageCalls).toHaveBeenCalledTimes(1);
+    expect(useTurnsMessageCalls).toHaveBeenCalledWith(["mock-second-ticket-number Translated[translation:to]({}) mock-second-queue-name"]);
   });
 
   it('renders the component as expected when it has errors', () => {
@@ -58,5 +64,7 @@ describe('TurnsStatusTableView component', () => {
     expect(renderShallow(<TurnsStatusTableView />)).toMatchSnapshot();
     expect(useTurnsStatusTable).toHaveBeenCalledTimes(1);
     expect(useTurnsStatusTable).toHaveBeenCalledWith();
+    expect(useTurnsMessageCalls).toHaveBeenCalledTimes(1);
+    expect(useTurnsMessageCalls).toHaveBeenCalledWith(undefined);
   });
 });

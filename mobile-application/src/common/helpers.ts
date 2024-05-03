@@ -42,3 +42,22 @@ export const goToPath = (pathname: string, params: Record<string, any> = undefin
     params,
   });
 };
+
+/**
+ * Waits for certain time
+ * @param  {number} timeout 
+ * @returns Promise<any>
+ */
+export const delay = (timeout: number) => new Promise((resolve) => {
+  setTimeout(resolve, timeout);
+});
+
+/**
+ * Gets the response blob url
+ * @param  {Response} response 
+ * @returns Promise<string>
+ */
+export const getResponseBlobUrl = async (response: Response): Promise<string> => {
+  const stream = await response.blob();
+  return URL.createObjectURL(stream);
+};
