@@ -8,9 +8,7 @@ const useTurnsMessageCalls = (textItems: string[] | undefined): void => {
   useEffect(() => {
     if (textItems?.length) {
       loadMultipleAudio(textItems)
-        .catch((error) => {
-          console.error(error);
-        });
+        .catch(console.error);
     }
   }, [textItems?.join('.')]);
 };
