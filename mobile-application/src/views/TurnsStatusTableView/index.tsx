@@ -4,6 +4,7 @@ import { View, StyleSheet } from 'react-native';
 import { DataTable } from 'react-native-paper';
 import { AppView, ConditionalContainer } from '../../common/components';
 import useTurnsStatusTable from '../../hooks/useTurnsStatusTable';
+import useTurnsMessageCalls from '../../hooks/useTurnsMessageCalls';
 import {
   TRANSLATION_NEXT_TURNS_KEY,
   TRANSLATION_TURN_KEY,
@@ -11,7 +12,6 @@ import {
   TRANSLATION_WAIT_MESSAGE_KEY,
   TRANSLATION_TO_KEY,
 } from '../../common/translations/translation-keys';
-import { loadMultipleAudio } from '../../common/services/service-turn';
 import { BEING_ATTENDED_STATUS_CODE, TO_BE_ATTENDED_STATUS_CODE } from './constants';
 
 /**
@@ -35,15 +35,9 @@ const TurnsStatusTableView: React.FC<TurnsStatusTableViewProps> = (props: TurnsS
   const beingAttendedItems = data?.items?.filter(item => item.statusCode === BEING_ATTENDED_STATUS_CODE);
   const toBeAttendedItems = data?.items?.filter(item => item.statusCode === TO_BE_ATTENDED_STATUS_CODE);
 
-  React.useEffect(() => {
-    if (toBeAttendedItems?.length) {
-      const textItems = toBeAttendedItems
-        .map(item => `${item.ticketNumber} ${t(TRANSLATION_TO_KEY)} ${item.queueName}`);
-      loadMultipleAudio(textItems).catch((error) => {
-        console.error(error);
-      });
-    }
-  }, [toBeAttendedItems?.join('.')]);
+  const textItems = toBeAttendedItems?.map(item => `${item.ticketNumber} ${t(TRANSLATION_TO_KEY)} ${item.queueName}`);
+    
+  useTurnsMessageCalls(textItems);
 
   return (
     <AppView
