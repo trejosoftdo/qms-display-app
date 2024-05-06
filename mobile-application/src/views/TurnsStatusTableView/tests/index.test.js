@@ -53,7 +53,10 @@ describe('TurnsStatusTableView component', () => {
     expect(useTurnsStatusTable).toHaveBeenCalledTimes(1);
     expect(useTurnsStatusTable).toHaveBeenCalledWith();
     expect(useTurnsMessageCalls).toHaveBeenCalledTimes(1);
-    expect(useTurnsMessageCalls).toHaveBeenCalledWith(["mock-second-ticket-number Translated[translation:to]({}) mock-second-queue-name"]);
+    expect(useTurnsMessageCalls).toHaveBeenCalledWith([
+      "Translated[translation:nextTurns]({})",
+      "mock-second-ticket-number Translated[translation:to]({}) mock-second-queue-name"
+    ]);
   });
 
   it('renders the component as expected when it has errors', () => {

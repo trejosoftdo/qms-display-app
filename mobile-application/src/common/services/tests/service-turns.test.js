@@ -87,8 +87,16 @@ describe('Service Turns service', () => {
     it('loads the audio items as expected expected', async () => {
       await loadMultipleAudio(mockTextItems);
       expect(mockApiInstance.getTurnAudio).toHaveBeenCalledTimes(2);
-      expect(mockApiInstance.getTurnAudio).toHaveBeenCalledWith('first');
-      expect(mockApiInstance.getTurnAudio).toHaveBeenCalledWith('second');
+      expect(mockApiInstance.getTurnAudio).toHaveBeenCalledWith(
+        'first',
+        mockAuthHeaders.applicationId,
+        mockAuthHeaders.authorization,
+      );
+      expect(mockApiInstance.getTurnAudio).toHaveBeenCalledWith(
+        'second',
+        mockAuthHeaders.applicationId,
+        mockAuthHeaders.authorization,
+      );
       expect(mockSound.loadAsync).toHaveBeenCalledTimes(2);
       expect(mockSound.loadAsync).toHaveBeenCalledWith(
         { uri: mockURI },
