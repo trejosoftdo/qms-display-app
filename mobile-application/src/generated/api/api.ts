@@ -573,13 +573,23 @@ export const ServiceturnsApiFetchParamCreator = function (configuration?: Config
          * Gets the audio of a turn
          * @summary Get Turn Audio
          * @param {string} turnName 
+         * @param {string} application 
+         * @param {string} authorization 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getTurnAudio(turnName: string, options: any = {}): FetchArgs {
+        getTurnAudio(turnName: string, application: string, authorization: string, options: any = {}): FetchArgs {
             // verify required parameter 'turnName' is not null or undefined
             if (turnName === null || turnName === undefined) {
                 throw new RequiredError('turnName','Required parameter turnName was null or undefined when calling getTurnAudio.');
+            }
+            // verify required parameter 'application' is not null or undefined
+            if (application === null || application === undefined) {
+                throw new RequiredError('application','Required parameter application was null or undefined when calling getTurnAudio.');
+            }
+            // verify required parameter 'authorization' is not null or undefined
+            if (authorization === null || authorization === undefined) {
+                throw new RequiredError('authorization','Required parameter authorization was null or undefined when calling getTurnAudio.');
             }
             const localVarPath = `/api/v1/serviceturns/audio`;
             const localVarUrlObj = url.parse(localVarPath, true);
@@ -589,6 +599,14 @@ export const ServiceturnsApiFetchParamCreator = function (configuration?: Config
 
             if (turnName !== undefined) {
                 localVarQueryParameter['turn_name'] = turnName;
+            }
+
+            if (application !== undefined && application !== null) {
+                localVarHeaderParameter['application'] = String(application);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -655,11 +673,13 @@ export const ServiceturnsApiFp = function(configuration?: Configuration) {
          * Gets the audio of a turn
          * @summary Get Turn Audio
          * @param {string} turnName 
+         * @param {string} application 
+         * @param {string} authorization 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getTurnAudio(turnName: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
-            const localVarFetchArgs = ServiceturnsApiFetchParamCreator(configuration).getTurnAudio(turnName, options);
+        getTurnAudio(turnName: string, application: string, authorization: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = ServiceturnsApiFetchParamCreator(configuration).getTurnAudio(turnName, application, authorization, options);
             return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                     if (response.status >= 200 && response.status < 300) {
@@ -703,11 +723,13 @@ export const ServiceturnsApiFactory = function (configuration?: Configuration, f
          * Gets the audio of a turn
          * @summary Get Turn Audio
          * @param {string} turnName 
+         * @param {string} application 
+         * @param {string} authorization 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getTurnAudio(turnName: string, options?: any) {
-            return ServiceturnsApiFp(configuration).getTurnAudio(turnName, options)(fetch, basePath);
+        getTurnAudio(turnName: string, application: string, authorization: string, options?: any) {
+            return ServiceturnsApiFp(configuration).getTurnAudio(turnName, application, authorization, options)(fetch, basePath);
         },
         /**
          * Gets turns status table for the application in context
@@ -734,12 +756,14 @@ export class ServiceturnsApi extends BaseAPI {
      * Gets the audio of a turn
      * @summary Get Turn Audio
      * @param {string} turnName 
+     * @param {string} application 
+     * @param {string} authorization 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ServiceturnsApi
      */
-    public getTurnAudio(turnName: string, options?: any) {
-        return ServiceturnsApiFp(this.configuration).getTurnAudio(turnName, options)(this.fetch, this.basePath);
+    public getTurnAudio(turnName: string, application: string, authorization: string, options?: any) {
+        return ServiceturnsApiFp(this.configuration).getTurnAudio(turnName, application, authorization, options)(this.fetch, this.basePath);
     }
 
     /**

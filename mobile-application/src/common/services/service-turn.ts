@@ -17,7 +17,7 @@ const loadTextAudio = async (text: string): Promise<void> => {
     authorization,
   } = await getDeviceAuthHeaders();
 
-  const response = await apiInstance.getTurnAudio(text);
+  const response = await apiInstance.getTurnAudio(text, applicationId, authorization);
   const uri = await getResponseBlobUrl(response);
   const sound = new Audio.Sound();
   await sound.loadAsync({ uri }, { shouldPlay: true });
